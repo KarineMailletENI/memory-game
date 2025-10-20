@@ -4,33 +4,57 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/index.css" />
-    <link
+    <!-- <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
-    />
+    /> -->
     <title>ENI - MEMORY</title>
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg">
-        <h1 class="navbar-brand col-12">ENI - MEMORY - Accueil</h1>
-        <div>
-          <a class="nav-link" href="./index.html">Acceuil</a>
-          <a class="nav-link" href="./assets/pages/inscription.html"
-            >S'inscrire</a
-          >
-          <a class="nav-link" href="./assets/pages/connexion.html"
-            >Se connecter</a
-          >
-          <a class="nav-link" href="./assets/pages/profil.html">Profil</a>
-          <a class="nav-link" href="./assets/pages/jouer.html">Jouer</a>
-        </div>
+      <nav>
+        <h1>ENI - MEMORY - Accueil</h1>
+        <ul>
+          <li>
+            <a href="./index.html">Acceuil</a>
+          </li>
+          <li>
+            <a href="./assets/pages/inscription.html">S'inscrire</a>
+          </li>
+          <li>
+            <a href="./assets/pages/connexion.html"
+            >Se connecter</a>
+          </li>
+          <li>
+            <a href="./assets/pages/profil.html">Profil</a>
+          </li>
+          <li>
+            <a href="./assets/pages/jouer.html">Jouer</a>
+          </li>
+        </ul>
       </nav>
     </header>
-    <main></main>
-    <footer></footer>
+    <main>
+      <div class="capsule">
+        <p>Bienvenue sur le site du Memory de l'ENI.</p>
+        <p>Venez jouer avec nous et faites le meilleur score possible.</p>
+        <h2>Règle du jeu :</h2>
+        <ul>
+          <li>Retournez deux cartes. Si les images sont identiques, le jeu laisse les cartes visibles.</li>
+          <li>Si les images sont différentes, les cartes se retournent faces cachées là où elles étaient.</li>
+          <li>La partie est terminée lorsque toutes les cartes ont été assemblées par paires.</li>
+        </ul>
+        <img src="/memory-game/assets/images/memory_detail.png" alt="Memory avec une grille de 4 par 3 représentant des fruits et légumes.">
+        <p>Si vous voulez vous souvenir de votre score, inscrivez-vous via le formulaire.</p>
+        <p>Le jeu garde les <span>5 meilleurs</span> scores.</p>
+        <p>Si vous voulez relancer une partie cliquez sur <span>la barre d'espace</span>.</p>
+      </div>
+    </main>
+    <footer>
+      <p>site créer par : Karine Maillet</p>
+    </footer>
     <script type="module" src="./assets/js/index.js"></script>
   </body>
 </html>
