@@ -9,8 +9,11 @@ body{
     font-family: "Teachers", sans-serif;
     font-size: 20px;
 }
+span{
+    font-weight: bolder;
+}
 
-
+/**************************** HEADER *************************/
 header{
     background-color:#1c2023;
     display: block;
@@ -44,8 +47,12 @@ header a:hover{
     background-color: #a430a4;
     color: #212529;
 }
-
-
+.page_active{
+    border: solid 2px #1c2023;
+    background-color: #a430a4;
+    color: #212529;
+}
+/* ************************* CORPS PAGE INDEX *************************** */
 main{
     display: flex;
     justify-content:center;
@@ -53,6 +60,7 @@ main{
 .capsule{
     background-color:#1c2023;
     border-radius: 15px;
+    border: solid 1px grey;
     padding: 35px;
     margin: 40px;
     display: flex;
@@ -67,9 +75,36 @@ main{
     padding: 20px;
     width: 350px;
 }
-span{
-    font-weight: bolder;
+
+/* ************************* CORPS PAGE INDEX *************************** */
+.force_mot-de-passe{
+    display: inline-block;
 }
+.force_mot-de-passe :first-child{
+    border-top: solid 3px orange;
+}
+.force_mot-de-passe :nth-child(2n+2){
+    border-top: solid 3px yellow;
+}
+.force_mot-de-passe :last-child{
+    border-top: solid 3px green;
+}
+
+/* ************************* CORPS PAGE PROFIL *************************** */
+.choix_memory_nonactif{display: none;}
+
+/* ************************* CORPS PAGE JOUER *************************** */
+#message_consigne{display: block;}
+#message_gagne{display: none;}
+#Nombre_coups{display: block;}
+.taille5x4{display: none;}
+.grid-contain-jouer{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+
+/* **********************FOOTER ************************* */
 footer{
     height: 30px;
     width: 100vw;

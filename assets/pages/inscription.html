@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    /> -->
+    <title>ENI - MEMORY</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>ENI - MEMORY - S'inscrire</h1>
+        <ul>
+          <li>
+            <a href="./index.html">Acceuil</a>
+          </li>
+          <li>
+            <a class="page_active" href="./assets/pages/inscription.html">S'inscrire</a>
+          </li>
+          <li>
+            <a href="./assets/pages/connexion.html"
+            >Se connecter</a>
+          </li>
+          <li>
+            <a href="./assets/pages/profil.html">Profil</a>
+          </li>
+          <li>
+            <a href="./assets/pages/jouer.html">Jouer</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="capsule">
+        <h2>Inscrivez-vous.</h2>
+        <fieldset>
+            <form action="POST" enctype="multipart/form-data">
+                <label for="nom">Nom d'utilisateur</label>
+                <input type="text" id="nom" placeholder="3 caractères minimum">
+                <label for="email">Entrez votre email</label>
+                <input type="text" id="email" placeholder="Votre email">
+                <label for="motdepasse">Mot de passe</label>
+                <input type="text" id="motdepasse" placeholder="Votre mot de passe">
+                <p>Au moins un symbole, un chiffre, ainsi que 6 caractères minimum.</p>
+                <div class="force_mot-de-passe">
+                    <div col-3>faible</div>
+                    <div col-3>moyen</div>
+                    <div col-3>fort</div>
+                </div>
+                <label for="confirme_mdp">Confirmer le mot de passe</label>
+                <input type="text" id="confirme_mdp" placeholder="Confirmez le mot de passe">
+                <input type="button" value="Création du compte" name="creation">
+                <input type="reset" value="Annuler" name="annuler">
+            </form>
+        </fieldset>
+      </div>
+    </main>
+    <footer>
+      <p>site créer par : Karine Maillet</p>
+    </footer>
+    <script type="module" src="./assets/js/index.js"></script>
+  </body>
+</html>
