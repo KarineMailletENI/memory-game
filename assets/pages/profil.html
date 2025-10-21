@@ -18,20 +18,20 @@
         <h1>ENI - MEMORY - Profil</h1>
         <ul>
           <li>
-            <a href="./index.html">Acceuil</a>
+            <a href="../../index.html">Acceuil</a>
           </li>
           <li>
-            <a href="./assets/pages/inscription.html">S'inscrire</a>
+            <a href="inscription.html">S'inscrire</a>
           </li>
           <li>
-            <a href="./assets/pages/connexion.html"
+            <a href="connexion.html"
             >Se connecter</a>
           </li>
           <li>
-            <a class="page_active" href="./assets/pages/profil.html">Profil</a>
+            <a class="page_active" href="profil.html">Profil</a>
           </li>
           <li>
-            <a href="./assets/pages/jouer.html">Jouer</a>
+            <a href="jouer.html">Jouer</a>
           </li>
         </ul>
       </nav>
@@ -45,7 +45,8 @@
                 <input type="text" id="nom" placeholder="">
                 <label for="email">Entrez votre email</label>
                 <input type="text" id="email" placeholder="">
-                <label for="choixMemory">Choix du Memory</label>
+                <label for="monChoixMemory">Choix du Memory</label>
+                <input list="choixMemory" id="monChoixMemory" name="monChoixMemory">
                 <datalist id="choixMemory">
                     <option check value="Animaux animés"></option>
                     <option value="Animaux"></option>
@@ -55,12 +56,12 @@
                     <option value="Dinosaures"></option>
                 </datalist>
                 <div>
-                    <img class="choix_memory_actif" src="/memory-game/assets/images/animauxAnimes/memory_detail_animaux_animes.png" alt="Détails des différents animaux animés qui seront présents sur la grille du memory">
-                    <img class="choix_memory_nonactif" src="/memory-game/assets/images/animaux/memory_detail_animaux.png" alt="Détails des différents animaux qui seront présents sur la grille du memory">
-                    <img class="choix_memory_nonactif" src="/memory-game/assets/images/animauxdomestiques/memory_detail_animaux_domestiques.png" alt="Détails des différents animaux domestiques qui seront présents sur la grille du memory">
-                    <img class="choix_memory_nonactif" src="/memory-game/assets/images/memory_detail.png" alt="Détails des différents légumes qui seront présents sur la grille du memory">
-                    <img class="choix_memory_nonactif" src="/memory-game/assets/images/chiens/memory_details_chiens.png" alt="Détails des différents chiens qui seront présents sur la grille du memory">
-                    <img class="choix_memory_nonactif" src="/memory-game/assets/images/dinosaures/memory_detail_dinosaures.png" alt="Détails des différents dinosaures qui seront présents sur la grille du memory">
+                    <img class="img_choix_memory img_actif" src="/memory-game/assets/images/animauxAnimes/memory_detail_animaux_animes.png" alt="Détails des différents animaux animés qui seront présents sur la grille du memory">
+                    <img class="img_choix_memory img_nonactif" src="/memory-game/assets/images/animaux/memory_detail_animaux.png" alt="Détails des différents animaux qui seront présents sur la grille du memory">
+                    <img class="img_choix_memory img_nonactif" src="/memory-game/assets/images/animauxdomestiques/memory_detail_animaux_domestiques.png" alt="Détails des différents animaux domestiques qui seront présents sur la grille du memory">
+                    <img class="img_choix_memory img_nonactif" src="/memory-game/assets/images/memory_detail.png" alt="Détails des différents légumes qui seront présents sur la grille du memory">
+                    <img class="img_choix_memory img_nonactif" src="/memory-game/assets/images/chiens/memory_details_chiens.png" alt="Détails des différents chiens qui seront présents sur la grille du memory">
+                    <img class="img_choix_memory img_nonactif" src="/memory-game/assets/images/dinosaures/memory_detail_dinosaures.png" alt="Détails des différents dinosaures qui seront présents sur la grille du memory">
                 </div>
                 <label for="taille_memory"></label>
                 <datalist id="taille_memory">
@@ -87,6 +88,6 @@
     <footer>
       <p>site créer par : Karine Maillet</p>
     </footer>
-    <script type="module" src="./assets/js/index.js"></script>
+    <script type="module" src="../js/profile.js"></script>
   </body>
 </html>

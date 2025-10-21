@@ -18,20 +18,20 @@
         <h1>ENI - MEMORY - S'inscrire</h1>
         <ul>
           <li>
-            <a href="./index.html">Acceuil</a>
+            <a href="../../index.html">Acceuil</a>
           </li>
           <li>
-            <a href="./assets/pages/inscription.html">S'inscrire</a>
+            <a href="inscription.html">S'inscrire</a>
           </li>
           <li>
-            <a href="./assets/pages/connexion.html"
+            <a href="connexion.html"
             >Se connecter</a>
           </li>
           <li>
-            <a href="./assets/pages/profil.html">Profil</a>
+            <a href="profil.html">Profil</a>
           </li>
           <li>
-            <a class="page_active" href="./assets/pages/jouer.html">Jouer</a>
+            <a class="page_active" href="jouer.html">Jouer</a>
           </li>
         </ul>
       </nav>
@@ -39,49 +39,109 @@
     <main>
       <div class="capsule">
         <div class="scores">
-          <h2>Derniers Scores :</h2>
+          
           <table>
-            <tr>
+            <caption><h2>Derniers Scores :</h2></caption>
+            <thead>
               <th>Pseudo</th>
               <th>Score</th>
               <th>Taille</th>
               <th>Choix Memory</th>
               <th>Date</th>
-            </tr>
+            </thead>
           </table>
         </div>
         <p id="message_consigne">Tentez de gagner avec le moins d'essais possible.</p>
         <p id="message_gagne">Bravo ! Vous avez gagné !</p>
         <p>Appuyer sur la <span>barre d'espace</span> pour relancer le jeu.</p>
-        <p id="Nombre_coups">Nombre de coups : ?</p>
-        <p id="message_gagne">Votre score final : ?</p>
-        <div class="grid-contain-jouer">
-          <img class="face_cachee" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
-          <img class="face_cachee" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
-          <img class="face_cachee" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
-          <img class="face_cachee" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
-          <img class="face_cachee" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
-          <img class="face_cachee" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
-          <img class="face_cachee" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
-          <img class="face_cachee" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
-          <img class="face_cachee" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
-          <img class="face_cachee" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
-          <img class="face_cachee" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
-          <img class="face_cachee" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
-          <img class="face_cachee taille5x4" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
-          <img class="face_cachee taille5x4" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
-          <img class="face_cachee taille5x4" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
-          <img class="face_cachee taille5x4" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
-          <img class="face_cachee taille5x4" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
-          <img class="face_cachee taille5x4" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
-          <img class="face_cachee taille5x4" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
-          <img class="face_cachee taille5x4" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
+        <p id="message">Nombre de coups : 0</p>
+        <div class="flex-contain-jouer">
+          <div class="carte">
+            <img class="face_cachee" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
+            <img class="carte_visible" src="../images/memory-legume/1.svg" alt="pomme">
+          </div>
+          <div class="carte">
+            <img class="face_cachee" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
+            <img class="carte_visible" src="../images/memory-legume/1.svg" alt="pomme">
+          </div>
+          <div class="carte">
+            <img class="face_cachee" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
+            <img class="carte_visible" src="../images/memory-legume/2.svg" alt="banane">
+          </div>
+          <div class="carte">
+            <img class="face_cachee" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
+            <img class="carte_visible" src="../images/memory-legume/2.svg" alt="banane">
+          </div>
+          <div class="carte taille3x4">
+            <img class="face_cachee" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
+            <img class="carte_visible" src="../images/memory-legume/3.svg" alt="brocolis">
+          </div>
+          <div class="carte taille3x4">
+            <img class="face_cachee" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
+            <img class="carte_visible" src="../images/memory-legume/3.svg" alt="brocolis">
+          </div>
+          <div class="carte taille3x4">
+            <img class="face_cachee" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
+            <img class="carte_visible" src="../images/memory-legume/4.svg" alt="cerises">
+          </div>
+          <div class="carte taille3x4">
+            <img class="face_cachee" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
+            <img class="carte_visible" src="../images/memory-legume/4.svg" alt="cerises">
+          </div>
+          <div class="carte taille3x4">
+            <img class="face_cachee" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
+            <img class="carte_visible" src="../images/memory-legume/5.svg" alt="piment vert">
+          </div>
+          <div class="carte taille3x4">
+            <img class="face_cachee" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
+            <img class="carte_visible" src="../images/memory-legume/5.svg" alt="piment vert">
+          </div>
+          <div class="carte taille3x4">
+            <img class="face_cachee" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
+            <img class="carte_visible" src="../images/memory-legume/6.svg" alt="fraise">
+          </div>
+          <div class="carte taille3x4">
+            <img class="face_cachee" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
+            <img class="carte_visible" src="../images/memory-legume/6.svg" alt="fraise">
+          </div>
+          <div class="carte taille5x4">
+            <img class="face_cachee" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
+            <img class="carte_visible" src="" alt="">
+          </div>
+          <div class="carte taille5x4">
+            <img class="face_cachee" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
+            <img class="carte_visible" src="" alt="">
+          </div>
+          <div class="carte taille5x4">
+            <img class="face_cachee" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
+            <img class="carte_visible" src="" alt="">
+          </div>
+          <div class="carte taille5x4">
+            <img class="face_cachee" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
+            <img class="carte_visible" src="" alt="">
+          </div>
+          <div class="carte taille5x4">
+            <img class="face_cachee" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
+            <img class="carte_visible" src="" alt="">
+          </div>
+          <div class="carte taille5x4">
+            <img class="face_cachee" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
+            <img class="carte_visible" src="" alt="">
+          </div>
+          <div class="carte taille5x4">
+            <img class="face_cachee" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
+            <img class="carte_visible" src="" alt="">
+          </div>
+          <div class="carte taille5x4">
+            <img class="face_cachee" src="/memory-game/assets/images/question.svg" alt="carte face cachée">
+            <img class="carte_visible" src="" alt="">
+          </div>
         </div>
       </div>
     </main>
     <footer>
       <p>site créer par : Karine Maillet</p>
     </footer>
-    <script type="module" src="./assets/js/index.js"></script>
+    <script type="module" src="../js/jouer.js"></script>
   </body>
 </html>

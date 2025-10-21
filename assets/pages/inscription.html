@@ -18,28 +18,28 @@
         <h1>ENI - MEMORY - S'inscrire</h1>
         <ul>
           <li>
-            <a href="./index.html">Acceuil</a>
+            <a href="../../index.html">Acceuil</a>
           </li>
           <li>
-            <a class="page_active" href="./assets/pages/inscription.html">S'inscrire</a>
+            <a class="page_active" href="inscription.html">S'inscrire</a>
           </li>
           <li>
-            <a href="./assets/pages/connexion.html"
+            <a href="connexion.html"
             >Se connecter</a>
           </li>
           <li>
-            <a href="./assets/pages/profil.html">Profil</a>
+            <a href="profil.html">Profil</a>
           </li>
           <li>
-            <a href="./assets/pages/jouer.html">Jouer</a>
+            <a href="jouer.html">Jouer</a>
           </li>
         </ul>
       </nav>
     </header>
     <main>
       <div class="capsule">
-        <h2>Inscrivez-vous.</h2>
         <fieldset>
+            <legend><h2>Inscrivez-vous.</h2></legend>
             <form action="POST" enctype="multipart/form-data">
                 <label for="nom">Nom d'utilisateur</label>
                 <input type="text" id="nom" placeholder="3 caractères minimum">
@@ -55,8 +55,10 @@
                 </div>
                 <label for="confirme_mdp">Confirmer le mot de passe</label>
                 <input type="text" id="confirme_mdp" placeholder="Confirmez le mot de passe">
-                <input type="button" value="Création du compte" name="creation">
-                <input type="reset" value="Annuler" name="annuler">
+                <div class="btn_fin_formulaire">
+                  <input type="button" value="Création du compte" name="creation">
+                  <input type="reset" value="Annuler" name="annuler">
+                </div>
             </form>
         </fieldset>
       </div>
@@ -64,6 +66,6 @@
     <footer>
       <p>site créer par : Karine Maillet</p>
     </footer>
-    <script type="module" src="./assets/js/index.js"></script>
+    <script type="module" src="../js/index.js"></script>
   </body>
 </html>

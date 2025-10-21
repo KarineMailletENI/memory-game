@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   color: honeydew;
 }
 body{
@@ -29,17 +30,14 @@ h1 {
 header ul{
     display: flex;
     justify-content: center;
-    gap: 15px;
 }
 header li{
     list-style: none;
 }
 header a {
     color: #a430a4;
-    border-radius: 10px;
     border : solid 2px #a430a4;
     padding: 10px;
-    margin: 20px;
     text-decoration: none;
 }
 header a:hover{
@@ -49,6 +47,7 @@ header a:hover{
 }
 .page_active{
     border: solid 2px #1c2023;
+    border-collapse : collapse;
     background-color: #a430a4;
     color: #212529;
 }
@@ -76,39 +75,115 @@ main{
     width: 350px;
 }
 
-/* ************************* CORPS PAGE INDEX *************************** */
-.force_mot-de-passe{
-    display: inline-block;
+/* ************************* CORPS PAGE INSCRIPTION *************************** */
+fieldset{
+    border : none;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    /* grid-template-rows: repeat(11,50px); */
+}
+label, input, .force_mot-de-passe{
+    margin: 10px;
+    border : none
+}
+#motdepasse ~ p{
+    font-size: 14px;
+}
+.force_mot-de-passe {
+    display: grid;
+    grid-template-columns: repeat(3,100px);
+    gap: 10%;
+    justify-content: space-evenly;
 }
 .force_mot-de-passe :first-child{
     border-top: solid 3px orange;
+    justify-items: center;
 }
 .force_mot-de-passe :nth-child(2n+2){
     border-top: solid 3px yellow;
+    justify-items: center;
 }
 .force_mot-de-passe :last-child{
     border-top: solid 3px green;
+    justify-items: center;
 }
-
+.btn_fin_formulaire{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.btn_fin_formulaire input{
+    padding: 10px;
+    background-color: #a430a4;
+    border-radius: 10px;
+    margin: 10px;
+}
 /* ************************* CORPS PAGE PROFIL *************************** */
-.choix_memory_nonactif{display: none;}
-
+.img_nonactif{display: none;}
+thead {
+  background: #a430a4;
+}
+thead th{
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.5)
+  );
+  border: 2px solid whitesmoke;
+  border-collapse:collapse;
+}
+table{
+  text-align: center;
+}
+tbody tr{
+  border: 2px solid whitesmoke;
+  border-collapse:collapse;
+}
 /* ************************* CORPS PAGE JOUER *************************** */
 #message_consigne{display: block;}
 #message_gagne{display: none;}
-#Nombre_coups{display: block;}
-.taille5x4{display: none;}
-.grid-contain-jouer{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(3,1fr);
+.flex-contain-jouer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 40vw;
+    height: calc(0.75 * 40vw - 2 * 5px);
+    margin-top: 20px;
 }
-
+.flex-contain-jouer>.carte{
+    /* pour en avoir 4 en ligne moins les marges */
+    width: calc(25% - 2 * 5px); 
+    margin: 5px;
+    position: relative;
+}
+.flex-contain-jouer>.carte > img{
+    width: 100%;
+    padding: 20px;
+    position: absolute;
+    background: #31353a;
+    border-radius: 10px;
+}
+.flex-contain-jouer>.taille5x4{display: none;}
+.carte > .face_cachee{
+    visibility:initial;
+}
+.carte > .carte_visible{
+    visibility: hidden;
+}
+.carte.tourne > .face_cachee{
+    visibility: hidden;
+}
+.carte.tourne > .carte_visible{
+    visibility:initial;
+}
 /* **********************FOOTER ************************* */
 footer{
-    height: 30px;
+    height: 60px;
     width: 100vw;
-    position: fixed;
-    bottom: 0;
-    text-align: center;
+    position: sticky;
+    background-color: #212529;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
