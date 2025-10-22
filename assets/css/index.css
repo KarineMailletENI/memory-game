@@ -164,7 +164,7 @@ tbody tr{
 }
 .flex-contain-jouer>.carte > img{
     width: 100%;
-    padding: 20px;
+    padding: 10px;
     position: absolute;
     background: #31353a;
     border-radius: 10px;
