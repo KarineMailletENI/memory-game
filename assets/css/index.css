@@ -171,10 +171,10 @@ tbody tr{
 .carte > .carte_visible{
     visibility: hidden;
 }
-.carte.tourne > .face_cachee{
+.carte.visible > .face_cachee{
     visibility: hidden;
 }
-.carte.tourne > .carte_visible{
+.carte.visible > .carte_visible{
     visibility:initial;
 }
 /* **********************FOOTER ************************* */
