@@ -13,7 +13,6 @@ body{
 span{
     font-weight: bolder;
 }
-
 /**************************** HEADER *************************/
 header{
     background-color:#1c2023;
@@ -150,12 +149,18 @@ tbody tr{
     width: 40vw;
     height: calc(0.75 * 40vw - 2 * 5px);
     margin-top: 20px;
+    perspective: 1000px;
 }
 .flex-contain-jouer>.carte{
     /* pour en avoir 4 en ligne moins les marges */
     width: calc(25% - 2 * 5px); 
     margin: 5px;
     position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+}
+.carte.visible {
+  transform: rotateY(180deg);
 }
 .flex-contain-jouer>.carte > img{
     width: 100%;
@@ -163,20 +168,14 @@ tbody tr{
     position: absolute;
     background: #31353a;
     border-radius: 10px;
+    backface-visibility: hidden;
+     -webkit-backface-visibility: hidden; /*pour chrome et safari */
 }
 .flex-contain-jouer>.taille5x4{display: none;}
-.carte > .face_cachee{
-    visibility:initial;
+.flex-contain-jouer>.carte > .carte_visible {
+    transform: rotateY(180deg);
 }
-.carte > .carte_visible{
-    visibility: hidden;
-}
-.carte.visible > .face_cachee{
-    visibility: hidden;
-}
-.carte.visible > .carte_visible{
-    visibility:initial;
-}
+
 /* **********************FOOTER ************************* */
 footer{
     height: 60px;

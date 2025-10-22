@@ -23,7 +23,7 @@ function partieContinue(){
 }
 
 function onRetourneLesCartesSiPerdu(c1,c2){
-    if(c1.childNodes[3].src !== c2.childNodes[3].src){
+    if(c1.childNodes[1].src !== c2.childNodes[1].src){
         c1.classList.remove('visible');
         c2.classList.remove('visible');
     }
@@ -44,7 +44,7 @@ function leScoreMonte(c1,c2){
 }
 
 function gagneMancheOuPas(c1,c2){
-    if(c1.childNodes[3].src === c2.childNodes[3].src){
+    if(c1.childNodes[1].src === c2.childNodes[1].src){
         manchegagne++;
     }else{
         onRetourneLesCartesSiPerdu(carte1,carte2);
@@ -91,7 +91,7 @@ function reinitialiser(){
     melangeLesCartes();
 }
 function verifErreurDoubleClick(c1,c2){
-    if(c1.childNodes[3] === c2.childNodes[3]){
+    if(c1.childNodes[1] === c2.childNodes[1]){
         alert('Vous avez triché');
         reinitialiser();
         //pour gérer l'incrémentation qui arrive après la vérif.
