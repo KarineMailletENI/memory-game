@@ -1,5 +1,5 @@
 let score = 0;
-let nbrMancheMin = 12;
+let nbrCartes = 12;
 let manchegagne = 0 ;
 let partieGg = false;
 let nombreDeCarteSelectionnee = 0;
@@ -9,23 +9,25 @@ let temp;
 const messageHTML = document.getElementById("message");
 const cartes = document.querySelectorAll(".carte");
 const messageGagneHTML = document.getElementById("message_gagne");
+let delaiRetourneCarte;
 
-function gagneMancheOuPas(c1,c2){
-    if(c1.childNodes[3].src === c2.childNodes[3].src){
-        manchegagne++;
-    }
-    if(manchegagne === nbrMancheMin/2){
-        messageGagne();
-        messageGagneHTML.style.display = "block";
-    }
+melangeLesCartes();
+function melangeLesCartes(){
+    cartes.forEach(carte => {
+        let numAlea = parseInt(Math.random()*nbrCartes);
+        carte.style.order = numAlea;
+    })
 }
+function partieContinue(){
+    return manchegagne !== nbrCartes/2
+}
+
 function onRetourneLesCartesSiPerdu(c1,c2){
     if(c1.childNodes[3].src !== c2.childNodes[3].src){
         c1.classList.remove('visible');
         c2.classList.remove('visible');
     }
 }
-//Si le nombre de manchegagne est égal au nombre de cartes div par 2 alors partiegagne = true
 function changeMessage(){
     const message = `Nombre de coups : ${score}`;
     messageHTML.textContent = message;
@@ -36,10 +38,23 @@ function messageGagne(){
 }
 function leScoreMonte(c1,c2){
     score ++;
-    if(manchegagne !== nbrMancheMin/2){
+    if(partieContinue()){
         changeMessage();
     }
 }
+
+function gagneMancheOuPas(c1,c2){
+    if(c1.childNodes[3].src === c2.childNodes[3].src){
+        manchegagne++;
+    }else{
+        onRetourneLesCartesSiPerdu(carte1,carte2);
+    }
+    if(!partieContinue()){
+        messageGagne();
+        messageGagneHTML.style.display = "block";
+    }
+}
+
 function tournerCarte(){
     this.classList.add('visible');
     switch (nombreDeCarteSelectionnee) {
@@ -52,9 +67,10 @@ function tournerCarte(){
             nombreDeCarteSelectionnee ++;
             leScoreMonte(carte1,carte2);
             verifErreurDoubleClick(carte1,carte2);
-            gagneMancheOuPas(carte1,carte2);
+            delaiRetourneCarte = setTimeout(gagneMancheOuPas,5000,carte1,carte2);
             break;
         case 2:
+            clearTimeout(delaiRetourneCarte);
             onRetourneLesCartesSiPerdu(carte1,carte2);
             carte1 = this;
             nombreDeCarteSelectionnee=1;
@@ -62,6 +78,9 @@ function tournerCarte(){
             break;
     }
 }
+
+
+
 function reinitialiser(){
     const cartesRetournees = document.querySelectorAll(".visible");
     nombreDeCarteSelectionnee=0;
@@ -69,9 +88,9 @@ function reinitialiser(){
     manchegagne = 0;
     cartesRetournees.forEach(carte => carte.classList.remove("visible"));
     changeMessage();
+    melangeLesCartes();
 }
 function verifErreurDoubleClick(c1,c2){
-    //si doubleClick alors afficher vous avez triché et réinitialisé.
     if(c1.childNodes[3] === c2.childNodes[3]){
         alert('Vous avez triché');
         reinitialiser();
@@ -83,7 +102,6 @@ function verifErreurDoubleClick(c1,c2){
 // ------------LES EVENEMENTS ----------------------
 cartes.forEach(carte => carte.addEventListener('click',tournerCarte));
 
-//appuyer sur la barre espace pour réinitialiser le score, le nombre de manchegagne et le nombre de carte sélectionnée et remettre toutes les cartes faces cachées
 document.addEventListener('keydown',(e) => {
     if(e.key===" "){
         reinitialiser();
