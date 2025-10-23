@@ -13,6 +13,9 @@ body{
 span{
     font-weight: bolder;
 }
+.cursor-pointer{
+    cursor: pointer;
+}
 /**************************** HEADER *************************/
 header{
     background-color:#1c2023;
@@ -72,108 +75,6 @@ main{
 .capsule img{
     padding: 20px;
     width: 350px;
-}
-
-/* ************************* CORPS PAGE INSCRIPTION *************************** */
-fieldset{
-    border : none;
-}
-form{
-    display: flex;
-    flex-direction: column;
-    /* grid-template-rows: repeat(11,50px); */
-}
-label, input, .force_mot-de-passe{
-    margin: 10px;
-    border : none
-}
-#motdepasse ~ p{
-    font-size: 14px;
-}
-.force_mot-de-passe {
-    display: grid;
-    grid-template-columns: repeat(3,100px);
-    gap: 10%;
-    justify-content: space-evenly;
-}
-.force_mot-de-passe :first-child{
-    border-top: solid 3px orange;
-    justify-items: center;
-}
-.force_mot-de-passe :nth-child(2n+2){
-    border-top: solid 3px yellow;
-    justify-items: center;
-}
-.force_mot-de-passe :last-child{
-    border-top: solid 3px green;
-    justify-items: center;
-}
-.btn_fin_formulaire{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-.btn_fin_formulaire input{
-    padding: 10px;
-    background-color: #a430a4;
-    border-radius: 10px;
-    margin: 10px;
-}
-/* ************************* CORPS PAGE PROFIL *************************** */
-.img_nonactif{display: none;}
-thead {
-  background: #a430a4;
-}
-thead th{
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.1),
-    rgba(0, 0, 0, 0.5)
-  );
-  border: 2px solid whitesmoke;
-  border-collapse:collapse;
-}
-table{
-  text-align: center;
-}
-tbody tr{
-  border: 2px solid whitesmoke;
-  border-collapse:collapse;
-}
-/* ************************* CORPS PAGE JOUER *************************** */
-#message_consigne{display: block;}
-#message_gagne{display: none;}
-.flex-contain-jouer{
-    display: flex;
-    flex-wrap: wrap;
-    width: 40vw;
-    height: calc(0.75 * 40vw - 2 * 5px);
-    margin-top: 20px;
-    perspective: 1000px;
-}
-.flex-contain-jouer>.carte{
-    /* pour en avoir 4 en ligne moins les marges */
-    width: calc(25% - 2 * 5px); 
-    margin: 5px;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.8s;
-}
-.carte.visible {
-  transform: rotateY(180deg);
-}
-.flex-contain-jouer>.carte > img{
-    width: 100%;
-    padding: 10px;
-    position: absolute;
-    background: #31353a;
-    border-radius: 10px;
-    backface-visibility: hidden;
-     -webkit-backface-visibility: hidden; /*pour chrome et safari */
-}
-.flex-contain-jouer>.taille5x4{display: none;}
-.flex-contain-jouer>.carte > .carte_visible {
-    transform: rotateY(180deg);
 }
 
 /* **********************FOOTER ************************* */

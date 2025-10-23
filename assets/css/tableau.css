@@ -1,0 +1,21 @@
+/* ************************* CORPS PAGE PROFIL *************************** */
+.img_nonactif{display: none;}
+thead {
+  background: #a430a4;
+}
+thead th{
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.5)
+  );
+  border: 2px solid whitesmoke;
+  border-collapse:collapse;
+}
+table{
+  text-align: center;
+}
+tbody tr{
+  border: 2px solid whitesmoke;
+  border-collapse:collapse;
+}

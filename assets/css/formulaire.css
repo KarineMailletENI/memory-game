@@ -1,0 +1,66 @@
+fieldset{
+    border : none;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+label, input, .force_mot-de-passe{
+    border : none;
+    height: 2em;
+    width: 100%;
+}
+label{
+    margin: 10px 10px 0 10px;
+}
+input{
+    margin: 0 10px 10px 10px;
+}
+input{
+    color: black;
+    padding: 10px;
+}
+#motdepasse ~ p{
+    font-size: 14px;
+}
+.force_mot-de-passe {
+    display: none; /*devient grid lorsqu'on fait submit*/
+    grid-template-columns: repeat(3,100px);
+    gap: 10%;
+    justify-content: space-evenly;
+}
+.force_mot-de-passe :first-child{
+    border-top: solid 3px orange;
+    justify-items: center;
+    display: none;
+}
+.force_mot-de-passe :nth-child(2n+2){
+    border-top: solid 3px yellow;
+    justify-items: center;
+    display: none;
+
+}
+.force_mot-de-passe :last-child{
+    border-top: solid 3px green;
+    justify-items: center;
+    display: none;
+
+}
+.btn_fin_formulaire{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.btn_fin_formulaire input{
+    padding: 10px 10px 25px 10px;
+    background-color: #a430a4;
+    border-radius: 10px;
+    margin: 10px;
+}
+img[alt="Erreur"], img[alt="Validé"]{
+    width: 3em;
+    position : relative;
+    top: -53px;
+    display: none;
+}

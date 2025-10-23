@@ -1,5 +1,5 @@
 //récupérer le choix
-const listOptionDuChoixMemory = document.getElementById("choixMemory").querySelectorAll('option');
+const listOptionDuChoixMemory = document.getElementById("image-selection").querySelectorAll('option');
 const optionCheck = optionValide(listOptionDuChoixMemory);
 const valueOptionCheck = optionCheck.getAttribute("value");
 //récupérer les images
@@ -28,3 +28,6 @@ function afficheLeBonElement(valeurBtn, mapImg, elementActif, classeActive, clas
 //Mes éléments de contrôles
 console.log(mapOptionMemory);
 afficheLeBonElement(valueOptionCheck,mapOptionMemory,img_actif,".img_actif",".img_inActif");
+
+
+
